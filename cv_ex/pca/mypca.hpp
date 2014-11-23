@@ -5,11 +5,11 @@
 
 #include <opencv2/core/core.hpp>
 namespace cv {
-class mypca
+class MyPCA
 {
 public:
-    mypca();
-    mypca(InputArray _data);
+    MyPCA();
+    MyPCA(InputArray _data);
     Mat getV() const;
     Mat getD() const;
     Mat getX() const;

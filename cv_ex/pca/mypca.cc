@@ -3,7 +3,7 @@
 #include <opencv2/core/core_c.h>
 
 namespace cv{
-    mypca::mypca(InputArray _data)
+    MyPCA::MyPCA(InputArray _data)
     { 
         Mat ndata = _data.getMat().clone();
         Mat data_cm; 
@@ -26,17 +26,17 @@ namespace cv{
         X = ndata * V.t();
     }
     
-    Mat mypca::getV() const
+    Mat MyPCA::getV() const
     {
         return V;
     }
 
-    Mat mypca::getD() const
+    Mat MyPCA::getD() const
     {
         return D;
     }
 
-    Mat mypca::getX() const
+    Mat MyPCA::getX() const
     {
         return X;
     }

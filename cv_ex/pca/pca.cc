@@ -11,7 +11,7 @@ int main( int argc, char** argv )
 {
     if( argc != 2)
     {
-     cout <<" Usage: display_image ImageToLoadAndDisplay" << endl;
+     cout <<" Usage: pca data" << endl;
      return -1;
     }
 
@@ -20,12 +20,12 @@ int main( int argc, char** argv )
     const CvMat* tmp = mldata.get_values();
     if(!tmp)
     {
-        cout << "Could not open or find the image" << endl;
+        cout << "Could not open or find the csv data" << endl;
         return -1;
     }
     Mat data(tmp, true);
     data = data.rowRange(1,data.rows);
-    mypca ps(data);
+    MyPCA ps(data); // perform PCA 
     cout<<"V = "<<endl<<" "<<ps.getV()<<endl;
     cout<<"D = "<<endl<<" "<<ps.getD()<<endl;
     return 0;
