@@ -20,3 +20,10 @@ HEADERS  += mainwindow.h \
     myglwidget.h
 
 FORMS    += mainwindow.ui
+
+OTHER_FILES += \
+    fragmentShader.fsh \
+    vertexShader.vsh
+
+RESOURCES += \
+    rc.qrc
